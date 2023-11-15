@@ -1,6 +1,10 @@
 <?php
-require('static/header.php');
+include_once 'static/header.php';
+
+echo "Hello World!";
 ?>
-<html>
-  
-</html>
+
+
+<?php
+include_once 'static/footer.php';
+?>
