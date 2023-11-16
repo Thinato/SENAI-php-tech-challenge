@@ -1,7 +1,7 @@
 <?php
 include_once 'static/header.php';
 
-echo "Hello World!";
+echo 'welcome to home'
 ?>
 
 
