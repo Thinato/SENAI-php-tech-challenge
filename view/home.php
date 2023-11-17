@@ -1,7 +1,5 @@
 <?php
 include_once 'static/header.php';
-
-echo 'welcome to home'
 ?>
 
 
