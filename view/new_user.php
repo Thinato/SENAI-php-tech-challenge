@@ -1,12 +1,15 @@
-
+<?php
+// include_once 'static/header.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/style.css">
-    <title>Login</title>
+    <title>Novo usuário</title>
     <style>
         body {
 
@@ -166,25 +169,33 @@
 
 <body>
     <div id="login">
+        <a href="/" class="voltar-link">Voltar</a>
         <form class="card">
             <div class="card-header text-center">
-                <h2>Login</h2>
+                <h2>Novo usuário</h2>
             </div>
             <div class="card-content">
-                <div class="card-content-area">
-                    <label for="usuario" class="form-label">Usuário</label>
-                    <input type="text" id="usuario" class="form-control" autocomplete="off">
+                <div class="card-content-area col">
+                    <label for="usuario" class="form-label">Nome de usuário</label>
+                    <input type="text" placeholder="Digite nome de usuário:" id="usuario" class="form-control"
+                        autocomplete="off">
                 </div>
                 <div class="card-content-area">
-                    <label for="password" class="form-label">Senha</label>
-                    <input type="password" id="password" class="form-control" autocomplete="off">
+                    <label for="password" class="form-label">Coloque uma Senha</label>
+                    <input type="password" placeholder="Digite uma senha" id="password" class="form-control"
+                        autocomplete="off">
+                </div>
+                <div class="card-content-area">
+                    <label for="password" class="form-label">Confirme a Senha</label>
+                    <input type="password" placeholder="Confirme sua senha" id="password" class="form-control"
+                        autocomplete="off">
                 </div>
             </div>
             <div class="card-footer">
-                <input type="submit" value="Login" class="btn btn-primary submit">
-                <a href="/NovoUsuario" class="">Novo Usuario</a>
+                <input type="submit" value="Criar" class="btn btn-primary submit">
             </div>
         </form>
     </div>
 </body>
+
 </html>

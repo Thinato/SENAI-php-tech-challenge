@@ -13,4 +13,11 @@ switch ($request) {
         break;
     case '/employee':
         require __DIR__ . $viewDir . 'employee.php';
+    break;
+    case '/NovoUsuario':
+        require __DIR__. $viewDir . 'new_user.php' ;
+        break;
+    case '/CadastroFuncionario':
+        require __DIR__ . $viewDir . 'employee.php';
+        break;
 }
