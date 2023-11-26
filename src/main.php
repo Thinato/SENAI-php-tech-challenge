@@ -17,6 +17,7 @@ require_once __DIR__ . '/employee/repository.php';
 require_once __DIR__ . '/employee/controller.php';
 
 $user = new User();
+
 $userRepository = new UserRepository($db);
 $authController = new AuthController($userRepository);
 

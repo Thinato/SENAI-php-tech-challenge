@@ -6,4 +6,5 @@ class User {
     public $password;
     public $created_at;
     public $updated_at;
+
 }

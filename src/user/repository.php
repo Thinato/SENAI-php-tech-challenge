@@ -8,11 +8,9 @@ class UserRepository {
     }
 
     public function create($id, $username, $password) {
-        $user = new User($id, $username, $password);
+        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
         
-        $sql = "INSERT INTO users (id, username, password) VALUES (?, ?, ?)";
-
-        return $db->query($sql, [$user->id, $user->username, $user->password]);
+        return $db->query($sql, [$username, $password]);
     }
 
     public function getUserById($id) {
