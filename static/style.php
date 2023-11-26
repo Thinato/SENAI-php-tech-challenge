@@ -1,6 +1,6 @@
 <style>
 body {
-    background-color: #f00;
+    /* background-color: #f00; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,6 +12,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#home {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
     height: 100vh;
     background-color: #f4f4f4;
 }

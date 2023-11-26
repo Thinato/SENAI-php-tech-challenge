@@ -1,40 +1,24 @@
 <?php
 include_once 'static/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-<header></header>
+<div id="home">
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>Home</h2>
+        </div>
+        <div class="card-content">
+            <div class="card-content-area">
+                <p>Olá, seja bem vindo ao sistema de cadastro de funcionários.</p>
+                <p>Para acessar o sistema, faça login.</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="/login" class="btn btn-primary submit">Login</a>
+        </div>
+    </div>
 
-<main>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Logo</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Página Inicial <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/CadastroFuncionario">Cadastro</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</main>
-
-<footer></footer>
-    
-</body>
-</html>
+</div>
 
 <?php
 include_once 'static/footer.php';
