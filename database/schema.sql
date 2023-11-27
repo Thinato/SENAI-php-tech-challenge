@@ -2,42 +2,15 @@ CREATE DATABASE paulo_e_leo;
 
 -- Dropa as tables para facilitar migrations
 
-IF EXISTS (
-    SELECT 1
-    FROM
-        information_schema.tables
-    WHERE
-        table_name = 'php_session'
-) THEN
-DROP TABLE php_session;
+DROP TABLE IF EXISTS php_session;
 
-END IF;
+DROP TABLE IF EXISTS employees;
 
-IF EXISTS (
-    SELECT 1
-    FROM
-        information_schema.tables
-    WHERE
-        table_name = 'employees'
-) THEN
-DROP TABLE employees;
-
-END IF;
-
-IF EXISTS (
-    SELECT 1
-    FROM
-        information_schema.tables
-    WHERE
-        table_name = 'users'
-) THEN
-DROP TABLE users;
-
-END IF;
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE
     users (
-        user_id INT PRIMARY KEY AUTO_INCREMENT,
+        user_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(255) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
         created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -46,7 +19,7 @@ CREATE TABLE
 
 CREATE TABLE
     employees (
-        employee_id INT PRIMARY KEY AUTO_INCREMENT,
+        employee_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
         registration VARCHAR(255) NOT NULL UNIQUE,
         first_name VARCHAR(255) NOT NULL,
         last_name VARCHAR(255) NOT NULL,
@@ -58,7 +31,7 @@ CREATE TABLE
         created_by INT UNSIGNED NOT NULL,
         created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (created_by) REFERENCES users(user_id)
+        CONSTRAINT fk_employee_user FOREIGN KEY (created_by) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE RESTRICT
     );
 
 CREATE TABLE
@@ -67,5 +40,5 @@ CREATE TABLE
         user_id INT UNSIGNED NOT NULL,
         session_lifetime INT UNSIGNED,
         expires_at DATETIME NOT NULL,
-        FOREIGN KEY (user_id) REFERENCES users(user_id)
+        CONSTRAINT fk_session_user FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE RESTRICT
     );
