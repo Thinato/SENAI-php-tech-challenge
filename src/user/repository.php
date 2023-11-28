@@ -1,29 +1,40 @@
 <?php
 
-class UserRepository {
+class UserRepository
+{
     private $db;
 
-    public function __construct($db) {
+    public function __construct($db)
+    {
         $this->db = $db;
     }
 
-    public function create($id, $username, $password) {
-        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-        
-        return $db->query($sql, [$username, $password]);
+    public function create(string $username, string $password)
+    {
+        $sql = "INSERT INTO users (username, password) VALUES ('" . $username . "', " . $password . ")";
+
+        $this->db->query($sql, [$username, $password]);
     }
 
-    public function getUserById($id) {
+    public function get_user_by_id(int $id)
+    {
         $sql = "SELECT * FROM users WHERE id = ?";
 
-        $db->query($sql, [$id]);
+        $this->db->query($sql, [$id]);
 
-        $result = $db->fetch();
+        $result = $this->db->fetch();
 
         return $result;
     }
 
-    public function getUserByUsername($username) {
-        
+    public function get_user_by_username(string $username)
+    {
+        $sql = "SELECT * FROM users WHERE username = ?";
+
+        $this->db->query($sql, [$username]);
+
+        $result = $this->db->fetch();
+
+        return $result;
     }
 }

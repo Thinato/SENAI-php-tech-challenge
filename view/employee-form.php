@@ -1,3 +1,7 @@
+<?php
+include_once 'static/header.php';
+?>
+
 <a href="/login" class="voltar-link">Voltar</a>
 <div id="login">
     <form class="card">
@@ -50,3 +54,8 @@
             </div>
     </form>
 </div>
+
+
+<?php
+include_once 'static/footer.php';
+?>

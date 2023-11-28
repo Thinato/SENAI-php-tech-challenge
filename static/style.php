@@ -5,7 +5,7 @@ body {
 }
 
 .content {
-    background-color: blueviolet;
+    background-color: #444;
 }
 
 #login {
@@ -17,13 +17,13 @@ body {
 }
 
 #home {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    height: 100vh;
-    background-color: #f4f4f4;
-}
+      padding: 50px;
+      background-color: #ffffff;
+      margin: 50px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
 
 .card {
     width: 300px;
