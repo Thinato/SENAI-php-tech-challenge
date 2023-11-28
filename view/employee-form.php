@@ -4,7 +4,7 @@ include_once 'static/header.php';
 
 <a href="/login" class="voltar-link">Voltar</a>
 <div id="login">
-    <form class="card">
+    <form class="card" action="controller?action=register-employee" method="post">>
         <div class="card-header text-center">
             <h2>Cadastro de novo funcionário</h2>
         </div>

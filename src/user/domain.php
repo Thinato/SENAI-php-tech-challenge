@@ -17,7 +17,7 @@ class UserDomain
 
         $user = $this->repository->get_user_by_username($username);
 
-        if ($user && $user->match_password($password)) {
+        if ($user && password_verify($password, $user['password'])) {
             return $user;
         }
 
