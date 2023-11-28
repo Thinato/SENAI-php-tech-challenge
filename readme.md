@@ -14,8 +14,10 @@ Utilize o [schema.sql](./database/schema.sql) para criar o banco, utilizando MyS
 
 Utilizando PHP >= 8.0, execute o comando
 
+Substitua as credencias de acordo
+
 ```
-php -S localhost:8000 src/main.php
+php -S localhost:8000 src/route.php
 ```
 
 
