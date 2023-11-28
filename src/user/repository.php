@@ -11,9 +11,9 @@ class UserRepository
 
     public function create(string $username, string $password)
     {
-        $sql = "INSERT INTO users (username, password) VALUES ('" . $username . "', " . $password . ")";
+        $sql = "INSERT INTO users (username, password) VALUES ('" . $username . "', '" . $password . "')";
 
-        $this->db->query($sql, [$username, $password]);
+        $this->db->query($sql);
     }
 
     public function get_user_by_id(int $id)
