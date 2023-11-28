@@ -45,6 +45,11 @@ if (isset($_GET['action'])) {
                 header('Location: /employee/register');
             }
             break;
+        case 'all-employees':
+            $employees = $employee_controller->get_all();
+            $_SESSION['employees'] = $employees;
+            header('Location: /employee');
+            break;
         case 'logout':
             session_destroy();
             header('Location: /');

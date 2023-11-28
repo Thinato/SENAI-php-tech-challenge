@@ -17,7 +17,7 @@ switch ($request) {
         require __DIR__ . $viewDir . 'register.php';
         break;
     case '/employee':
-        require __DIR__ . $viewDir . 'employee-form.php';
+        require __DIR__ . $viewDir . 'employee.php';
         break;
     case '/employee/register':
         require __DIR__ . $viewDir . 'employee-form.php';
