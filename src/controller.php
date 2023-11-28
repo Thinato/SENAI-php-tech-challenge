@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require __DIR__ . '/main.php';
 
 if (isset($_GET['action'])) {
@@ -36,8 +36,8 @@ if (isset($_GET['action'])) {
             $salary = $_POST['salary'];
             $role = $_POST['role'];
             $department = $_POST['department'];
-            $created_by = $_SESSION['user']['user_id'];
-            $employee = $employee_controller->register($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by);
+            $created_by = 1;
+            $employee = $employee_controller->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by);
 
             if ($employee) {
                 header('Location: /employee');
