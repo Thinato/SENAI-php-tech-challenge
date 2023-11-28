@@ -19,15 +19,15 @@ class EmployeeRepository
 
     public function get_by_id($id)
     {
-        $sql = "SELECT * FROM employees WHERE id = $id";
+        $sql = "SELECT * FROM employees WHERE employee_id = $id";
         $result = $this->db->query($sql);
         $employee = $result->fetch_assoc();
         return $employee;
     }
 
-    public function create($name, $email, $phone, $address, $salary, $department_id)
+    public function create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by)
     {
-        $sql = "INSERT INTO employees (registration, first_name, last_name, email, phone_number, salary, role, department, created_by) VALUES ('$registration', '$first_name', '$last_name', '$email', '$phone_number', '$salary', '$role', '$department', '$created_by')";
+        $sql = "INSERT INTO employees (registration, first_name, last_name, email, phone_number, salary, role, department, created_by) VALUES ('" . $registration . "', '" . $first_name . "', '" . $last_name . "', '" . $email . "', '" . $phone_number . "', '" . $salary . "', '" . $role . "', '" . $department . "', '" . $created_by . "')";
         $result = $this->db->query($sql);
         $employee = $this->get_by_id($this->db->insert_id);
         return $employee;

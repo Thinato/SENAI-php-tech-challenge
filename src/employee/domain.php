@@ -21,9 +21,9 @@ class EmployeeDomain
         return $employee;
     }
 
-    public function create($name, $email, $phone, $address, $salary, $department_id)
+    public function create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by)
     {
-        $employee = $this->repository->create($name, $email, $phone, $address, $salary, $department_id);
+        $employee = $this->repository->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by);
         return $employee;
     }
 }

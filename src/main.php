@@ -18,3 +18,7 @@ require_once __DIR__ . '/employee/controller.php';
 $user_repository = new UserRepository($db);
 $user_domain = new UserDomain($user_repository);
 $user_controller = new UserController($user_domain);
+
+$employee_repository = new EmployeeRepository($db);
+$employee_domain = new EmployeeDomain($employee_repository);
+$employee_controller = new EmployeeController($employee_domain);
