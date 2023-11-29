@@ -2,8 +2,6 @@ CREATE DATABASE paulo_e_leo;
 
 -- Dropa as tables para facilitar migrations
 
-DROP TABLE IF EXISTS php_session;
-
 DROP TABLE IF EXISTS employees;
 
 DROP TABLE IF EXISTS users;
