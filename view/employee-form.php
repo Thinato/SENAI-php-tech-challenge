@@ -1,7 +1,7 @@
 <?php include_once 'static/header.php'; ?>
 
 <div class="container">
-    <a href="/login" class="voltar-link">Voltar</a>
+    <a href="/employee" class="voltar-link">Voltar</a>
     <div id="login" class="d-flex justify-content-center">
         <form class="card mb-3" style="width: 70%;" action="controller?action=register-employee" method="post">
             <div class="card-header text-center">
