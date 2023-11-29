@@ -5,7 +5,7 @@ $employees = $_SESSION['employees'];
 ?>
 
 <div id="employee">
-    <a href="login" class="voltar-link">Voltar</a>
+    <a href="login" class="voltar-link">Logout</a>
     <table>
         <tr>
             <th>Registration</th>
