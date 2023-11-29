@@ -21,9 +21,9 @@ class EmployeeController
         return $employee;
     }
 
-    public function create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by)
+    public function create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department)
     {
-        $employee = $this->domain->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by);
+        $employee = $this->domain->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department);
         return $employee;
     }
 }

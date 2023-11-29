@@ -4,7 +4,7 @@ include_once 'static/header.php';
 <div class="container">
     <div id="register" class="text-center ">
         <a href="/" class="voltar-link">Voltar</a>
-        <form class="card mx-auto" action="controller?action=register" method="post">
+        <form class="card mx-auto" action="http://<?=$_SERVER['HTTP_HOST']?>/controller?action=register" method="post">
             <div class="card-header text-center">
                 <h2>Novo usuário</h2>
             </div>

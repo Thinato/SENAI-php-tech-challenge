@@ -25,9 +25,9 @@ class EmployeeRepository
         return $employee;
     }
 
-    public function create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by)
+    public function create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department)
     {
-        $sql = "INSERT INTO employees (registration, first_name, last_name, email, phone_number, salary, role, department, created_by) VALUES ('" . $registration . "', '" . $first_name . "', '" . $last_name . "', '" . $email . "', '" . $phone_number . "', '" . $salary . "', '" . $role . "', '" . $department . "', '" . $created_by . "')";
+        $sql = "INSERT INTO employees (registration, first_name, last_name, email, phone_number, salary, role, department) VALUES ('" . $registration . "', '" . $first_name . "', '" . $last_name . "', '" . $email . "', '" . $phone_number . "', '" . $salary . "', '" . $role . "', '" . $department . "')";
         $result = $this->db->query($sql);
         $employee = $this->get_by_id($this->db->insert_id);
         return $employee;
