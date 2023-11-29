@@ -11,7 +11,8 @@ if (isset($_GET['action'])) {
             $user = $user_controller->login($username, $password);
             if ($user) {
                 $_SESSION['user'] = $user;
-                header('Location: /employee');
+                session_write_close();
+                header('Location: /controller?action=all-employees');
             } else {
                 header('Location: /login');
             }
@@ -22,6 +23,7 @@ if (isset($_GET['action'])) {
             $user = $user_controller->register($username, $password);
             if ($user) {
                 $_SESSION['user'] = $user;
+                session_write_close();
                 header('Location: /employee');
             } else {
                 header('Location: /');
@@ -40,14 +42,16 @@ if (isset($_GET['action'])) {
             $employee = $employee_controller->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by);
 
             if ($employee) {
-                header('Location: /employee');
+                header('Location: /controller?action=all-employees');
             } else {
                 header('Location: /employee/register');
             }
             break;
         case 'all-employees':
+            session_start();
             $employees = $employee_controller->get_all();
             $_SESSION['employees'] = $employees;
+            session_write_close();
             header('Location: /employee');
             break;
         case 'logout':

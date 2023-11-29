@@ -3,7 +3,7 @@ include_once 'static/header.php';
 ?>
 
 <div id="login">
-    <form class="card" action="employee" method="post">
+    <form class="card" action="controller?action=login" method="post">
         <div class="card-header text-center">
             <h2>Login</h2>
         </div>

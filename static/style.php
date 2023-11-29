@@ -90,4 +90,52 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+#employee {
+    width: 80%;
+    margin: auto;
+}
+
+#employee table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#employee table th, #employee table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#employee table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#employee table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+}
+
+.voltar-link, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.voltar-link:hover, .btn:hover {
+    background-color: #3898ff;
+}
+
+#github-icon {
+    font-size: 32px;
+    color: #fff;
+}
+
 </style>
