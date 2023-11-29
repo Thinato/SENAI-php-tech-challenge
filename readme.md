@@ -18,3 +18,7 @@ Utilizando PHP >= 8.0, execute o comando
 ```
 php -S localhost:8000 src/route.php
 ```
+
+## Arquitetura
+
+Uma interpretação de alguém que nunca fez um projeto em php da clean architecture, não vimos nenhuma vídeo aula, mas usamos o Chat GPT e a própria documentação do PHP e chegamos nessa montruosidade.
