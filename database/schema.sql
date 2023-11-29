@@ -28,17 +28,6 @@ CREATE TABLE
         salary DECIMAL(10, 2) NOT NULL,
         role VARCHAR(255) NOT NULL,
         department VARCHAR(255) NOT NULL,
-        created_by INT UNSIGNED NOT NULL,
         created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        CONSTRAINT fk_employee_user FOREIGN KEY (created_by) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE RESTRICT
-    );
-
-CREATE TABLE
-    php_session (
-        session_id VARCHAR(255) PRIMARY KEY,
-        user_id INT UNSIGNED NOT NULL,
-        session_lifetime INT UNSIGNED,
-        expires_at DATETIME NOT NULL,
-        CONSTRAINT fk_session_user FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE RESTRICT
     );

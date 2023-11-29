@@ -10,11 +10,11 @@ include_once 'static/header.php';
         <div class="card-content">
             <div class="card-content-area">
                 <label for="username" class="form-label">Usuário</label>
-                <input type="text" id="username" class="form-control" autocomplete="off" required>
+                <input type="text" id="username" class="form-control" name="username" autocomplete="off" required>
             </div>
             <div class="card-content-area">
                 <label for="password" class="form-label">Senha</label>
-                <input type="password" id="password" class="form-control" autocomplete="off" required>
+                <input type="password" id="password" class="form-control" name="password" autocomplete="off" required>
             </div>
         </div>
         <div class="card-footer">

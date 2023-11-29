@@ -1,9 +1,11 @@
-<?php include_once 'static/header.php'; ?>
+<?php include_once 'static/header.php';?>
 
 <div class="container">
-    <a href="/employee" class="voltar-link">Voltar</a>
+    <a href="/controller?action=all-employees" class="voltar-link">Voltar</a>
     <div id="login" class="d-flex justify-content-center">
-        <form class="card mb-3" style="width: 70%;" action="controller?action=register-employee" method="post">
+        <form class="card mb-3" style="width: 70%;"
+        action="http://<?=$_SERVER['HTTP_HOST']?>/controller?action=register-employee"
+        method="post">
             <div class="card-header text-center">
                 <h2>Cadastro de novo funcionário</h2>
             </div>
@@ -55,4 +57,4 @@
     </div>
 </div>
 
-<?php include_once 'static/footer.php'; ?>
+<?php include_once 'static/footer.php';?>

@@ -10,7 +10,7 @@ $employees = $_SESSION['employees'];
 ?>
 
 <div id="employee">
-    <a href="/controller?action=logout" class="voltar-link">Logout</a>
+    <a href="/controller?action=logout" class="voltar-link">Sair</a>
     <table>
         <tr>
             <th>Registration</th>

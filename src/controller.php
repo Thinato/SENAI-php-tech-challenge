@@ -38,7 +38,6 @@ if (isset($_GET['action'])) {
             $salary = $_POST['salary'];
             $role = $_POST['role'];
             $department = $_POST['department'];
-            $created_by = 1;
             $employee = $employee_controller->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department, $created_by);
 
             if ($employee) {
