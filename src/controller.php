@@ -53,6 +53,42 @@ if (isset($_GET['action'])) {
             session_write_close();
             header('Location: /employee');
             break;
+
+        case 'update-employee-form':
+            $id = $_GET['id'];
+            $employee = $employee_controller->get_by_id($id);
+            $_SESSION['employee'] = $employee;
+            session_write_close();
+            header('Location: /employee/update');
+            break;
+
+        case 'update-employee':
+            $id = $_POST['employee_id'];
+            $registration = $_POST['registration'];
+            $first_name = $_POST['first_name'];
+            $last_name = $_POST['last_name'];
+            $email = $_POST['email'];
+            $phone_number = $_POST['phone_number'];
+            $salary = $_POST['salary'];
+            $role = $_POST['role'];
+            $department = $_POST['department'];
+            $employee = $employee_controller->update($id, $registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department);
+            if ($employee) {
+                header('Location: /controller?action=all-employees');
+            } else {
+                header('Location: /employee/update');
+            }
+            break;
+
+        case 'delete-employee':
+            $id = $_GET['id'];
+            $employee = $employee_controller->delete($id);
+            if ($employee) {
+                header('Location: /controller?action=all-employees');
+            } else {
+                header('Location: /employee');
+            }
+            break;
         case 'logout':
             session_destroy();
             header('Location: /');

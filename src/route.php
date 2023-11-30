@@ -22,6 +22,9 @@ switch ($request) {
     case '/employee/register':
         require __DIR__ . $viewDir . 'employee-form.php';
         break;
+    case '/employee/update':
+        require __DIR__ . $viewDir . 'employee-update.php';
+        break;
     case '/controller':
         require __DIR__ . '/controller.php';
         break;

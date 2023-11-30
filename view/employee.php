@@ -10,7 +10,7 @@ $employees = $_SESSION['employees'];
 ?>
 
 <div id="employee">
-    <a href="/controller?action=logout" class="voltar-link">Sair</a>
+    <a href="http://<?=$_SERVER['HTTP_HOST']?>/controller?action=logout" class="voltar-link">Sair</a>
     <table>
         <tr>
             <th>Registration</th>
@@ -21,6 +21,7 @@ $employees = $_SESSION['employees'];
             <th>Salary</th>
             <th>Role</th>
             <th>Department</th>
+            <th>Actions</th>
         </tr>
         <?php foreach ($employees as $employee): ?>
             <tr>
@@ -32,6 +33,10 @@ $employees = $_SESSION['employees'];
                 <td><?=$employee['salary']?></td>
                 <td><?=$employee['role']?></td>
                 <td><?=$employee['department']?></td>
+                <td>
+                    <a class="btn" href="http://<?=$_SERVER['HTTP_HOST']?>/controller?action=update-employee-form&id=<?=$employee['employee_id']?>">Editar</a>
+                    <a class="btn" href="http://<?=$_SERVER['HTTP_HOST']?>/controller?action=delete-employee&id=<?=$employee['employee_id']?>">Excluir</a>
+                </td>
             </tr>
         <?php endforeach;?>
     </table>

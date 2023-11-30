@@ -32,4 +32,19 @@ class EmployeeRepository
         $employee = $this->get_by_id($this->db->insert_id);
         return $employee;
     }
+
+    public function delete($id)
+    {
+        $sql = "DELETE FROM employees WHERE employee_id = $id";
+        $result = $this->db->query($sql);
+        return $result;
+    }
+
+    public function update($id, $registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department)
+    {
+        $sql = "UPDATE employees SET registration = '" . $registration . "', first_name = '" . $first_name . "', last_name = '" . $last_name . "', email = '" . $email . "', phone_number = '" . $phone_number . "', salary = '" . $salary . "', role = '" . $role . "', department = '" . $department . "' WHERE employee_id = $id";
+        $result = $this->db->query($sql);
+        $employee = $this->get_by_id($id);
+        return $employee;
+    }
 }

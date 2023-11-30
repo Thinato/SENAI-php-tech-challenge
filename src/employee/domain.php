@@ -26,4 +26,16 @@ class EmployeeDomain
         $employee = $this->repository->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department);
         return $employee;
     }
+
+    public function delete($id)
+    {
+        $employee = $this->repository->delete($id);
+        return $employee;
+    }
+
+    public function update($id, $registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department)
+    {
+        $employee = $this->repository->update($id, $registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department);
+        return $employee;
+    }
 }

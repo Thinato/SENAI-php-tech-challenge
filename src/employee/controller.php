@@ -26,4 +26,16 @@ class EmployeeController
         $employee = $this->domain->create($registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department);
         return $employee;
     }
+
+    public function delete($id)
+    {
+        $employee = $this->domain->delete($id);
+        return $employee;
+    }
+
+    public function update($id, $registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department)
+    {
+        $employee = $this->domain->update($id, $registration, $first_name, $last_name, $email, $phone_number, $salary, $role, $department);
+        return $employee;
+    }
 }
